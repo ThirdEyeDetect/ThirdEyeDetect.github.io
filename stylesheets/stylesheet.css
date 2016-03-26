@@ -51,7 +51,7 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 1em;
   line-height: 1.5;
-  color: #6d6d6d;
+  color: #191919;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
 }
@@ -90,7 +90,7 @@ header h2 {
 }
 
 .inner {
-  width: 620px;
+  width: auto;
   margin: 0 auto;
 }
 
@@ -241,7 +241,7 @@ form {
 /* GENERAL ELEMENT TYPE STYLES */
 
 h1 {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 h2 {
@@ -266,7 +266,7 @@ h4 {
 
 h5 {
   font-size: 1em;
-  color: #303030;
+  color: #d5000d;
 }
 
 h6 {
@@ -325,6 +325,10 @@ footer a {
 footer a:hover {
   color: #444;
 }
+iframe {
+    margin: 0 auto;
+    background-color: #777;
+}
 
 /* MISC */
 .clearfix:after {
@@ -334,6 +338,7 @@ footer a:hover {
   visibility: hidden;
   content: '.';
 }
+
 
 .clearfix {display: inline-block;}
 * html .clearfix {height: 1%;}
@@ -366,8 +371,16 @@ footer a:hover {
   }
 }
 
+.centered-pills { text-align:center; }
+.centered-pills ul.nav-pills { display:inline-block; }
+.centered-pills li { display:inline; }
+.centered-pills a { float:left; }
+* html .centered-pills ul.nav-pills { display:inline; } /* IE6 */
+*+html .centered-pills ul.nav-pills { display:inline; } /* IE7 */
+
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) { }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) { }
+

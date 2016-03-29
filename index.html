@@ -80,16 +80,19 @@
                       <li>Go to the settings page <img src="images/unnamed.png"/> Google Chrome (top right of the Chrome) and then select Extensions on the left hand side of the page.</li>
                       <li>Click on <b>Load Unpacked Extension</b> and navigate to where you have unzipped the repository.</li>
                       <li>Select the main folder (ThirdEyeExtension-master) and press Okay.</li>
-                      <li>The extension should now have been added to Chrome.</li>
+                      <li>The extension should now have been added to Chrome and the options page will open automatically</li>
+                      <li>Enter your email as the secondary notification channel. <code>ALERT!</code> Ensure that you fill this information out. If you do not, Third Eye will have no way of informing you of anomalous activity </li>
+                      <li> Third Eye extension is now ready to use </li>  
                       <!--<li> Stuff about making Exenstion point to Server -->
                     </ul>
                   </div>
                   <h5 style="margin-left:15px; margin-right:15px;">Server (Ubuntu or Windows)</h5>
                   <p style="margin-left:15px; margin-right:15px;"> ThirdEyeServer needs Pyhton 2.7 and MongoDB installed on your system. Server runs automatically on Port 5000
                   <div style="margin-left:35px; margin-right:35px;">
-                    
+                    <code>Note:</code> Third Eye Server is available for inspection but will not function stand alone. This feature will be added in the next release
                     <ul>
                       <li>Download the <a href="https://github.com/ThirdEyeDetect/ThirdEyeServer">repository</a> and unzip to a desired location</li>
+                      <li>Change values in <code>detection_system.py</code> at the function <code>def alarm</code> to your smtp server.</li>
                       <li>Run using the following command : <code>python server.py</code></li>
                     </ul>
                   </div>

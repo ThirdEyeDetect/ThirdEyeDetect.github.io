@@ -30,10 +30,8 @@
 
         <div>
           <header>
-            <center>
-              <h1>Third Eye: Continous Facebook Account Authenitcation</h1>
-              <img src="images/third_eye.gif"/>
-            </center>
+              <h2>ThirdEye: continuous Facebook account authentication</h2>
+              <!-- <img src="images/third_eye.gif"/> -->
           </header>
           <div>  
 
@@ -43,15 +41,15 @@
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#overview">Overview</a></li>
                   <li><a href="#install_guide">Installation</a></li>
-                  <li><a href="#usage">Usage Guide</a></li>
+                  <!-- <li><a href="#usage">Usage</a></li> -->
                   <li><a href="#people">Contact</a></li>
-                  <li><a href="#support">Supporting Organizations</a></li>
+                  <li><a href="#support">Supporting organizations</a></li>
                   </ul>
                 </div>
               </div>  
 
-              <div id="video-frame" style="padding: 10pt;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/s3FTafNKZCs" frameborder="0" allowfullscreen style="display:block;"></iframe>
+              <div id="video-frame" style="padding: 10pt">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/s3FTafNKZCs" frameborder="0" allowfullscreen style="display:block;border: .5px solid;"></iframe>
               </div>
 
               <div>
@@ -59,64 +57,136 @@
 
                   <!-- Overview -->
                   <h3>
-                  <a id="overview" class="anchor" href="#welcome-to-github-pages" aria-hidden="true" name="overview"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h3>
+                    
+                    <a id="overview" class="anchor"
+                    href="#welcome-to-github-pages" aria-hidden="true"
+                    name="overview"><span aria-hidden="true"
+                    class="octicon
+                    octicon-link"></span></a>Overview</h3>
 
-                  <p style="margin-left:15px; margin-right:15px;">Third Eye is a continous authenitcation system for Facebook on the Google Chrome web browser. It scrapes a user's Facebook activity directly of the browser to create a profile. Subsequent user Facebook activity is run in context of the generated profile. If observed activity deviates significantly expected behaviour, the user is notified through a pre-established secondary communication method such as email.</p>
-                  <center>
-                    <h5>System Architecture</h5>
+                  <p style="margin-left:15px; margin-right:15px;">
+                  ThirdEye is continuous authentication system for
+                  accessing Facebook through the Google Chrome web
+                  browser. It scrapes a user's Facebook activity
+                  directly from browser events to create a user's
+                  profile. Subsequent user Facebook activity is
+                  authenticated against the generated profile. If
+                  observed activity deviates significantly from
+                  expected behaviour, the user is notified through a
+                  pre-established communication method, such as
+                  email.</p>
+
+                  <h5 style="margin-left:15px; margin-right:15px;">System Architecture</h5>
+
                     <img src="images/drawing2.png" style="max-height: 500px;"/>
-                  </center>
 
-                  <p style="margin-left:15px; margin-right:15px;"> The system consists of a cross platform Chrome web <a href="#ext">extension</a> and a <a href="#serv">server</a>. The extension log's the data which is then sent to the server for user behaviour analysis and profile creation using machine learning techniques. If the server detects an anomaly, it notifies user using a secondary channel specified at install-time.</p>  
+                  <p style="margin-left:15px; margin-right:15px;">The
+                  system consists of a cross-platform Chrome
+                  web <a href="#ext">extension</a> and
+                  a <a href="#serv">server</a>. The extension captures
+                  events, which are then sent to the server for user
+                  behaviour analysis and profile creation with machine
+                  learning techniques. If the server detects an
+                  anomaly, it notifies the user using a secondary
+                  channel specified at install-time.</p>
                   
                   <!-- Installation Instuctions-->
                   <h3>
                   <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true" name="install_guide"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
-                  <h5 style="margin-left:15px; margin-right:15px;" name="ext">Extension (Ubuntu or Windows)</h5>
-                  <p style="margin-left:15px; margin-right:15px;"> The ThirdEye extension requires <a href="https://www.google.com/chrome">Google Chrome</a> web browser. Follow instructions below to install ThirdEye:
+                  <h5 style="margin-left:15px; margin-right:15px;" name="ext">Extension [<a href="https://github.com/ThirdEyeDetect/ThirdEyeExtension">GitHub repository</a>]</h5>
+
+                  <p style="margin-left:15px; margin-right:15px;"> The
+                  ThirdEye extension requires
+                  the <a href="https://www.google.com/chrome">Google
+                  Chrome</a> web browser. Follow instructions below to
+                  install the extension:
+
                   <div style="margin-left:35px; margin-right:35px;">
                     <ul>
-                      <li>Download the <a href="https://github.com/ThirdEyeDetect/ThirdEyeExtension/archive/master.zip">repository</a> and unzip to the desired location (such as desktop).</li>
-                      <li>Go to the settings page <img src="images/unnamed.png"/> Google Chrome (top right of the Chrome) and then select Extensions on the left hand side of the page.</li>
-                      <li>Click on <bold>Load Unpacked Extension</bold> and navigate to where you have unzipped the repository.</li>
-                      <li>Select the main folder (ThirdEyeExtension-master) and press Okay.</li>
-                      <li>The extension should now have been added to Chrome and the options page will open automatically.</li>
-                      <li>Enter your email in the form to create a secondary notification channel. Close the options page.<br>
-                        <code>ALERT!</code> Ensure that you fill this information out. If you do not, Third Eye will have no way of informing you of anomalous activity. </li>
-                      <li>You should receive an email by ThirdEye for a sucessful installation.</li>   
-                      <li>Third Eye extension is now active and listening for active Facebook tabs. It will automatically record actions performed on Facebook. </li>  
-                      <!--<li> Stuff about making Exenstion point to Server -->
+
+                      <li>Download
+                      the <a href="https://github.com/ThirdEyeDetect/ThirdEyeExtension/archive/master.zip">repository zip</a>
+                      and unzip to a desired location (such as your
+                      Desktop).</li>
+
+                      <li>Go to the settings page in Chrome (click on
+                        <img src="images/unnamed.png"/> in the top
+                        right of the window) and select 'Extensions'
+                        on the left side of the page.</li>
+
+                      <li>Click on <bold>'Load Unpacked
+                      Extension'</bold> and navigate to where you have
+                      unzipped the repository.</li>
+
+                      <li>Select the folder
+                        'ThirdEyeExtension-master' and click Okay.</li>
+
+                      <li>The extension will be added to Chrome and
+                        the options page will automatically open.</li>
+
+                      <li>Enter your email in the form to create a
+                      secondary notification channel. Close the
+                      options page.<br>
+                      <code>NOTE:</code> If you do not enter your
+                      email, ThirdEye will not be able to inform you
+                      of anomalous activity.</li>
+
+                      <li>You should receive an email from the
+                        ThirdEye platform indicating that your
+                        installation was successful.</li>
+
+                      <li>The extension is now active and is listening
+                        for Facebook activity across all the current
+                        and future tabs in Chrome.</li>
+
+                      <!--<li> Stuff about making extension point to Server -->
                     </ul>
                   </div>
-                  <h5 style="margin-left:15px; margin-right:15px;" name="serv">Server (Ubuntu or Windows)</h5>
-                  <p style="margin-left:15px; margin-right:15px;"> ThirdEyeServer needs Pyhton 2.7 and MongoDB installed on your system. Server runs automatically on Port 5000
+                  <h5 style="margin-left:15px; margin-right:15px;" name="serv">Server (Ubuntu or Windows) [<a href="https://github.com/ThirdEyeDetect/ThirdEyeServer">GitHub repository</a>]</h5>
+
+                  <p style="margin-left:15px; margin-right:15px;">
+                  The ThirdEye server needs Python 2.7 and MongoDB
+                  installed on your system. The server runs
+                  automatically on Port 5000.
+
                   <div style="margin-left:35px; margin-right:35px;">
-                    <code>Note:</code> Third Eye Server is available for inspection but will not function stand alone. This feature will be added in the next release
+                    <!-- <code>Note:</code> ThirdEye Server is available for inspection but will not function stand alone. This feature will be added in the next release -->
                     <ul>
-                      <li>Download the <a href="https://github.com/ThirdEyeDetect/ThirdEyeServer/archive/master.zip">repository</a> and unzip to a desired location</li>
-                      <li>Change values in <code>detection_system.py</code> at the function <code>def alarm</code> to your smtp server, email login and password.</li>
-                      <li>Run using the following command : <code>python server.py</code></li>
+                      <li>Download the <a href="https://github.com/ThirdEyeDetect/ThirdEyeServer/archive/master.zip">repository zip</a> and unzip to a desired location</li>
+
+                      <li>Set the proper SMTP/server/email values
+                        in <code>detection_system.py</code> in the
+                        <code>alarm</code> function.</li>
+
+                      <li>Start the server with: <code>python server.py</code></li>
                     </ul>
                   </div>
                    
-
-                  
                   <!-- Usage -->
-                  <h3>
+                  <!-- <h3>
                   <a id="creating-pages-manually" class="anchor" href="#usage" aria-hidden="true" name="usage"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h3>
 
                   <p></p>
+                  -->
 
                   <!-- Authors and Contributors -->
                   <h3>
                   <a id="authors-and-contributors" class="anchor" href="#people" aria-hidden="true" name="people"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors</h3>
-                    <p style="margin-left:25px; margin-right:25px;" ><a style="font-weight: bold;" href="http://arcaneiceman.github.io/"> Wali Ahmed Usmani</a>, <a style="font-weight: bold;" href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a> </p>
-                    <p style="margin-left:15px; margin-right:15px;">For support or contact please reach out to at waliusmani(at)gmail(dot)com</p>
+                    <p style="margin-left:15px;
+                    margin-right:15px"><a style="color:black"
+                    href="http://arcaneiceman.github.io/"> Wali Ahmed
+                    Usmani</a>, <a style="color: black;"
+                    href="http://www.cs.ubc.ca/~bestchai/">Ivan
+                    Beschastnikh</a> </p>
+
+                    <p style="margin-left:15px;
+                    margin-right:15px;">Please contact us at
+                    waliusmani(at)gmail(dot)com</p>
 
               </div>  
 
               <footer name="support">
-                <div style="text-align:center;">
+                <div style="text-align:left;">
                   Our supporters:
                 </div>
                 <div style="display: inline-block; text-align: center;">

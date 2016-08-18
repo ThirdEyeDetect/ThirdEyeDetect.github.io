@@ -59,7 +59,28 @@
                          <div class="container">
                           <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#contextdatadetails">Learn More</button>
                           <div id="contextdatadetails" class="collapse">
-                            ---- Coming Soon ----
+                            <h5>Session Actions:</h5>
+                              <ul>
+                                  <li><p><strong>Start Session</strong>: Occurs when the first tab of Facebook is opened in Chrome.</p></li>
+                                  <li><p><strong>End Session</strong>: Occurs when the last session of Facebook closes or there is no activity on the page for 5 minutes.</p></li>
+                              </ul>
+                            <h5>Silent Actions:</h5>
+                              <ul>
+                                  <li><p><strong>Page Change</strong>: Occurs when page changes(within Facebook). Context data includes page URL. </p></li>
+                                  <li><p><strong>Story View</strong>: Occurs when a story is scrolled past. Context data includes the name of the person who posted the story, its timestamp and whether its a sponsored message or not.</p></li>
+                                  <li><p><strong>Story Click</strong>: Occurs when a story is clicked on. Context data includes the name of the person who posted the story, its timestamp and whether its a sponsored message or not.</p></li>
+                                  <li><p><strong>Message Box Click</strong>: Occurs when the message icon on the top bar of Facebook is clicked. No context data.</p></li>
+                                  <li><p><strong>Notification Box Click</strong>: Occurs when the Notification icon on the top bar of Facebook is clicked. No context data.</p></li>
+                                  <li><p><strong>Friend Request Box Click</strong>: Occurs when the Friend Request icon on the top bar of Facebook is clicked. No context data.</p></li>
+                              </ul>
+                            <h5>Non Silent Actions:</h5>
+                              <ul>
+                                <li><p><strong>Comment</strong>: Occurs when you comment (on any post, story, or video). Context Data includes type of post, comment content and post timestamp.</p></li>
+                                <li><p><strong>Message</strong>: Occurs when you message someone on Facebook. Context includes message content and recepient.</p></li>
+                                <li><p><strong>Like</strong>: Occurs when you like a post. Context Data includes type of post and post timestamp.</p></li>
+                                <li><p><strong>Post</strong>: Occurs when you create a post. Context Data includes type of post, post timestamp and recpient of the post.</p></li>
+                              </ul>
+                              
                           </div>
                         </div>
                      </ul>
